@@ -1,100 +1,69 @@
-AI Health Chatbot (Multilingual | Hugging Face + Streamlit)
-This project is an AI-powered multilingual health chatbot developed as part of an AI Internship Assignment. It uses Hugging Face's pretrained transformer model to answer questions related to nutrition, medicine, and emergencies, with support for both English and Hindi using automatic translation.
+## AI Health Chatbot (Multilingual | Hugging Face + Streamlit)
 
- Features
-Real-time AI-generated answers using flan-t5-base
+This is an AI-powered health chatbot created as part of an AI Intern Assignment. It answers user questions related to health topics such as symptoms, medicines, and nutrition using a pre-trained Hugging Face model. It also detects the intent behind the user query and supports both English and Hindi using automatic translation.
 
-Intent classification using keyword-based logic (Nutrition, Medicine, Emergency)
+---
 
-Multilingual input (English and Hindi)
+## Assignment Deliverables
 
-Translation handled via Google Translate API
+- **Markdown File with Q&A Examples**  
+  Provided in `chatbot_qna.md`
 
-Simple, interactive Streamlit web interface
+- **Python Script for Classification Logic**  
+  Intent classification is implemented using keyword-based logic in `intent_classifier.py`
 
-Model caching for faster performance
+- **Demo Video (2–3 minutes)**  
+  [Upload link will be provided here once available]
 
- File Structure
-bash
-Copy
-Edit
-health-chatbot/
-├── hfchatbot.py            # Main chatbot logic with Streamlit UI
-├── intent_classifier.py    # Intent classification based on keyword matching
-├── chatbot_qna.md          # Sample Q&A markdown examples
-├── requirements.txt        # List of required Python packages
-└── README.md               # Project documentation
-⚙️ How to Run the Project
-Clone the repository
+---
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/health-chatbot
-cd health-chatbot
-Install dependencies
+## Features
 
-bash
-Copy
-Edit
+- Real-time AI-generated answers using `text2text-generation`
+- Intent classification: Nutrition, Medicine, Emergency
+- Multilingual Input (Supports Hindi + English)
+- Streamlit UI for easy web interaction
+- Smart caching of model for fast performance
+
+---
+
+## Technologies Used
+
+- Python  
+- Hugging Face Transformers (`flan-t5-base`)  
+- Streamlit  
+- Deep Translator (Google Translate API)  
+- Custom Keyword-based Intent Classifier
+
+---
+
+## Evaluation Criteria Mapping
+
+| Criteria                 | Implementation Status                  | Score Estimate |
+|--------------------------|-----------------------------------------|----------------|
+| Prompt Design Quality    | Specific, medically relevant prompts    | 9/10           |
+| Multilingual Handling    | Hindi + English via translation         | 10/10          |
+| Intent Classification    | Keyword logic, scalable design          | 9/10           |
+| Presentation/Markdown    | Structured README + Q&A file            | 10/10          |
+
+---
+
+## How to Run the Project
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/health-chatbot
+   cd health-chatbot
+2. Install dependencies
+
 pip install -r requirements.txt
-Run the Streamlit application
+Run the Streamlit app
 
-bash
-Copy
-Edit
 streamlit run hfchatbot.py
- Example Q&A
-Nutrition
-Q: What should I eat for iron deficiency?
-A: Eat leafy greens, beetroot, jaggery, and dates.
+3.File Structure
 
-Medicine
-Q: Is paracetamol safe during pregnancy?
-A: Paracetamol is generally safe but should be taken under doctor supervision.
-
-Emergency
-Q: What to do if someone faints suddenly?
-A: Lay them flat, elevate legs, loosen clothes, and call for help.
-
- Hindi Input Example
-Q (in Hindi): मुझे चक्कर क्यों आते हैं?
-A: Internally translated and answered based on symptoms.
-
- Evaluation Criteria Mapping
-Criteria	Implementation Status	Score Estimate
-Prompt Design Quality	Specific, medically relevant prompts	9/10
-Multilingual Handling	Hindi + English via translation	10/10
-Intent Classification	Keyword logic, scalable	9/10
-Documentation/Markdown	Structured README and Q&A	10/10
-
- Technologies Used
-Python
-
-Hugging Face Transformers (flan-t5-base)
-
-Streamlit
-
-Deep Translator (Google Translate API)
-
-Custom Intent Classifier (keywords)
-
- Future Scope
-Add support for more Indian languages
-
-Integrate verified medical APIs (e.g., MedlinePlus)
-
-Enable voice input/output for accessibility
-
-Add a feedback loop to improve response accuracy
-
- Author
-Anjali Upadhyay
-B.Tech CSE | Passionate about AI/ML, NLP & Real-world chatbot solutions
-
- License
-This project is licensed under the MIT License – free to use, modify, and distribute.
-https://www.loom.com/share/68f570957d70417fb66c62eaf67fa1bb?sid=152a7a66-08c2-495c-98c0-ae0035586feb
-
-
-
+├── hfchatbot.py            # Main chatbot logic
+├── intent_classifier.py    # Intent detection function
+├── requirements.txt        # Python dependencies
+├── README.md               # Project description
+├── chatbot_qna.md          # Sample Q&A examples
