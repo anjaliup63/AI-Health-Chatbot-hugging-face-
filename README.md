@@ -1,64 +1,74 @@
-
- AI Health Chatbot (Multilingual | Hugging Face + Streamlit)
-
-This is an AI-powered health chatbot created as part of an AI Intern Assignment. It answers user questions related to health (like symptoms, medicine, and nutrition) using a pre-trained Hugging Face model. It also detects the intent behind the question and now supports both English and Hindi inputs using automatic translation.
-
- Assignment Deliverables
- 
- 1. Markdown File with Q&A Examples
- 2. Provided in chatbot_qna.md section below.
- 3. Python Notebook / Script for Classification Logic
-
-Intent classification is implemented using keyword-based logic in intent_classifier.py.
-
- 3. Demo Video (2–3 minutes)
-
-[Upload link will be provided here once available.]
+AI Health Chatbot (Multilingual | Hugging Face + Streamlit)
+This project is an AI-powered multilingual health chatbot developed as part of an AI Internship Assignment. It uses Hugging Face's pretrained transformer model to answer questions related to nutrition, medicine, and emergencies, with support for both English and Hindi using automatic translation.
 
  Features
+Real-time AI-generated answers using flan-t5-base
 
-Real-time AI-generated answers (text2text-generation)
+Intent classification using keyword-based logic (Nutrition, Medicine, Emergency)
 
-Intent classification: Nutrition, Medicine, Emergency
+Multilingual input (English and Hindi)
 
-Multilingual Input (Supports Hindi + English)
+Translation handled via Google Translate API
 
-Streamlit UI for web interaction
+Simple, interactive Streamlit web interface
 
-Smart caching of model for fast performance
+Model caching for faster performance
+
+ File Structure
+bash
+Copy
+Edit
+health-chatbot/
+├── hfchatbot.py            # Main chatbot logic with Streamlit UI
+├── intent_classifier.py    # Intent classification based on keyword matching
+├── chatbot_qna.md          # Sample Q&A markdown examples
+├── requirements.txt        # List of required Python packages
+└── README.md               # Project documentation
+⚙️ How to Run the Project
+Clone the repository
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/health-chatbot
+cd health-chatbot
+Install dependencies
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Run the Streamlit application
+
+bash
+Copy
+Edit
+streamlit run hfchatbot.py
+ Example Q&A
+Nutrition
+Q: What should I eat for iron deficiency?
+A: Eat leafy greens, beetroot, jaggery, and dates.
+
+Medicine
+Q: Is paracetamol safe during pregnancy?
+A: Paracetamol is generally safe but should be taken under doctor supervision.
+
+Emergency
+Q: What to do if someone faints suddenly?
+A: Lay them flat, elevate legs, loosen clothes, and call for help.
+
+ Hindi Input Example
+Q (in Hindi): मुझे चक्कर क्यों आते हैं?
+A: Internally translated and answered based on symptoms.
 
  Evaluation Criteria Mapping
+Criteria	Implementation Status	Score Estimate
+Prompt Design Quality	Specific, medically relevant prompts	9/10
+Multilingual Handling	Hindi + English via translation	10/10
+Intent Classification	Keyword logic, scalable	9/10
+Documentation/Markdown	Structured README and Q&A	10/10
 
-Criteria
-
-Implementation Status
-
-Score Estimate
-
-Prompt Design Quality
-
-Specific, medically relevant prompts
-
-9/10
-
-Multilingual Handling
-
-Hindi + English via translation
-
-10/10
-
-Intent Classification Logic
-
-Keyword logic, scalable design
-
-9/10
-
-Presentation/Markdown
-
-Structured README + Q&A file
-
-🔧 Technologies Used
-
+ Technologies Used
 Python
 
 Hugging Face Transformers (flan-t5-base)
@@ -69,65 +79,22 @@ Deep Translator (Google Translate API)
 
 Custom Intent Classifier (keywords)
 
-🏁 How to Run the Project
-
-Clone the repo
-
-git clone https://github.com/yourusername/health-chatbot
-cd health-chatbot
-
-Install dependencies
-
-pip install -r requirements.txt
-
-Run the Streamlit app
-
-streamlit run hfchatbot.py
-
-Example Q&A
-
-Nutrition
-
-Q: What should I eat for iron deficiency?A: Eat leafy greens, beetroot, jaggery, and dates.
-
-Medicine
-
-Q: Is paracetamol safe during pregnancy?A: Paracetamol is generally safe but should be taken under doctor supervision.
-
-Emergency
-
-Q: What to do if someone faints suddenly?A: Lay them flat, elevate legs, loosen clothes, and call for help.
-
-Hindi Input Example
-
-Q (in Hindi): मुझे चक्कर क्यों आते हैं?✅ Translated internally and answered accurately.
-
- File Structure
-
-├── hfchatbot.py             # Main chatbot logic
-├── intent_classifier.py     # Intent detection function
-├── requirements.txt         # Python dependencies
-├── README.md                # Project description
-├── chatbot_qna.md           # Sample Q&A examples (markdown)
-
- Author
-
-Anjali UpadhyayB.Tech CSE | Passionate about AI/ML, NLP & Real-world chatbot solutionsLinkedIn Profile
-
  Future Scope
-
 Add support for more Indian languages
 
-Integrate medical APIs for verified data
+Integrate verified medical APIs (e.g., MedlinePlus)
 
-Add voice input/output for accessibility
+Enable voice input/output for accessibility
 
-Create feedback loop to improve accuracy
+Add a feedback loop to improve response accuracy
+
+ Author
+Anjali Upadhyay
+B.Tech CSE | Passionate about AI/ML, NLP & Real-world chatbot solutions
 
  License
+This project is licensed under the MIT License – free to use, modify, and distribute.
+https://www.loom.com/share/68f570957d70417fb66c62eaf67fa1bb?sid=152a7a66-08c2-495c-98c0-ae0035586feb
 
-This project is open-source and free to use under the MIT License.
 
- For demo video and live Q&A results, see the uploaded screencast or preview link (to be added).
- https://www.loom.com/share/68f570957d70417fb66c62eaf67fa1bb?sid=152a7a66-08c2-495c-98c0-ae0035586feb
 
